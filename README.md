@@ -16,7 +16,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Directory
 
-- This directory can be clone using `git clone git@github.com:Fayob/maths-magician-app.git`
+- This directory can be clone using `git clone git@github.com:Fayob/Bookstore.git`
 
 ## Available Scripts
 
