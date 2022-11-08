@@ -13,7 +13,6 @@ const Categories = () => {
   return (
     <div>
       <h2>{categories}</h2>
-      <h2>{ categories }</h2>
       <button type="button" onClick={status}> Check Status </button>
     </div>
   );
