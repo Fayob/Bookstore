@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { checkStatus } from '../redux/categories/categories';
 
@@ -11,13 +10,10 @@ const Categories = () => {
     dispatch(checkStatus());
   };
 
-  useEffect(() => {
-    status();
-  }, []);
-
   return (
     <div>
-      {categories}
+      <h2>{ categories }</h2>
+      <button type="button" onClick={status}> Check Status </button>
     </div>
   );
 };
