@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
+import { postBook } from '../redux/books/books';
 
 const Form = () => {
   const dispatch = useDispatch();
   const [state, setState] = useState({
-    id: '',
+    item_id: '',
     title: '',
     author: '',
   });
@@ -17,10 +17,10 @@ const Form = () => {
       alert('pls enter book title and author');
       return;
     }
-    dispatch(addBook(state));
+    dispatch(postBook(state));
 
     setState({
-      id: '',
+      item_id: '',
       title: '',
       author: '',
     });
@@ -29,8 +29,9 @@ const Form = () => {
   const onChangeHandler = (e) => {
     setState({
       ...state,
-      id: v4(),
+      item_id: v4(),
       [e.target.name]: e.target.value,
+      category: 'Fiction',
     });
   };
 
@@ -47,14 +48,17 @@ const Form = () => {
         <option value="">
           Author
         </option>
-        <option value="option-1">
-          Option-1
+        <option value="John Smith">
+          John Smith
         </option>
-        <option value="option-2">
-          Option-2
+        <option value="James Bond">
+          James Bond
         </option>
-        <option value="option-3">
-          Option-3
+        <option value="John Doe">
+          John Doe
+        </option>
+        <option value="Lynn Vivian">
+          Lynn Vivian
         </option>
       </select>
       <button type="button" onClick={addBooks}> Add Book </button>
