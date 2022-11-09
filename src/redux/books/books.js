@@ -3,9 +3,15 @@ import axios from 'axios';
 
 const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/iLHHUaQkGnHrtgSfZHWb/books';
 
-export const getAllBooks = createAsyncThunk('book/getAllBooks', async () => {
-  const response = await axios(url);
-  return response.data;
+// eslint-disable-next-line consistent-return
+export const getAllBooks = createAsyncThunk('book/getAllBooks', async (_, thunkAPI) => {
+  try {
+    const response = await axios(url);
+    return response.data;
+  } catch (error) {
+    console.log(thunkAPI.rejectWithValue(error.response));
+    return thunkAPI.rejectWithValue(error.response.payload.data);
+  }
 });
 
 export const postBook = createAsyncThunk('book/postBook', async (obj, thunkAPI) => {
@@ -32,6 +38,9 @@ const bookSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(getAllBooks.fulfilled, (state, action) => action.payload);
+
+    // Testing rejected promise
+    builder.addCase(getAllBooks.rejected, (state, action) => console.log(action.error.message));
 
     builder.addCase(postBook.fulfilled, (state, action) => action.payload.payload);
 
