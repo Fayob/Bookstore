@@ -16,13 +16,14 @@ const Books = () => {
     <>
       {
         Object.keys(bookState).map((book) => {
-          const { title, author } = bookState[book][0];
+          const { title, author, category } = bookState[book][0];
           return (
             <Book
               key={book}
               title={title}
               author={author}
               id={book}
+              category={category}
             />
           );
         })

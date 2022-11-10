@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { v4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { postBook } from '../redux/books/books';
+import './Form.css';
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -10,11 +11,12 @@ const Form = () => {
     item_id: '',
     title: '',
     author: '',
+    category: '',
   });
 
   const addBooks = () => {
-    if (!state.title || !state.author) {
-      alert('pls enter book title and author');
+    if (!state.title || !state.author || !state.category) {
+      alert('pls enter book title, author and category in the required field');
       return;
     }
     dispatch(postBook(state));
@@ -23,6 +25,7 @@ const Form = () => {
       item_id: '',
       title: '',
       author: '',
+      category: '',
     });
   };
 
@@ -31,37 +34,54 @@ const Form = () => {
       ...state,
       item_id: v4(),
       [e.target.name]: e.target.value,
-      category: 'Fiction',
     });
   };
 
   return (
     <>
-      <input
-        type="text"
-        placeholder="Book Title"
-        name="title"
-        value={state.title}
-        onChange={onChangeHandler}
-      />
-      <select name="author" value={state.author} onChange={onChangeHandler}>
-        <option value="">
-          Author
-        </option>
-        <option value="John Smith">
-          John Smith
-        </option>
-        <option value="James Bond">
-          James Bond
-        </option>
-        <option value="John Doe">
-          John Doe
-        </option>
-        <option value="Lynn Vivian">
-          Lynn Vivian
-        </option>
-      </select>
-      <button type="button" onClick={addBooks}> Add Book </button>
+      <h2 className="form_heading">Add New Book</h2>
+      <form className="form">
+        <div
+          className="book_title"
+        >
+          <input
+            type="text"
+            placeholder="Book Title"
+            name="title"
+            value={state.title}
+            onChange={onChangeHandler}
+          />
+        </div>
+        <div className="book_title">
+          <input
+            type="text"
+            placeholder="Book Author"
+            name="author"
+            value={state.author}
+            onChange={onChangeHandler}
+          />
+        </div>
+        <div className="select_container">
+          <select name="category" value={state.category} onChange={onChangeHandler} className="select">
+            <option value="">
+              Category
+            </option>
+            <option value="Fiction">
+              Fiction
+            </option>
+            <option value="Economy">
+              Economy
+            </option>
+            <option value="Action">
+              Action
+            </option>
+            <option value="Horror">
+              Horror
+            </option>
+          </select>
+        </div>
+        <button type="button" onClick={addBooks} className="add_book"> ADD BOOK </button>
+      </form>
     </>
   );
 };
