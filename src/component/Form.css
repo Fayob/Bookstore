@@ -33,7 +33,7 @@
   font-style: italic;
 }
 
-.select_container{
+.select_container {
   min-width: 40%;
   height: 2.813rem;
   padding: 0.5rem;
@@ -44,6 +44,7 @@
 }
 
 .select {
+  color: #c4c4c4;
   width: 100%;
   height: 100%;
   outline: none;
@@ -51,6 +52,7 @@
 }
 
 .add_book {
+  cursor: pointer;
   max-width: 80%;
   height: 2.813rem;
   padding: 0.5rem;
