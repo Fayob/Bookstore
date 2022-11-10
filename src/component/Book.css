@@ -1,0 +1,194 @@
+.book_card {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: 10.625rem;
+  margin: 2.313rem auto 0;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.category {
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.title {
+  width: 12.313rem;
+  height: 1.813rem;
+  margin: 0.188rem 6rem 0 0;
+  font-family: RobotoSlab;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.book_paragraph {
+  width: 6.688rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  margin-bottom: 1rem;
+}
+
+.comment_book {
+  cursor: pointer;
+  text-align: start;
+  width: 4.563rem;
+  height: 1.188rem;
+  margin: 0.188rem 0.938rem 0.125rem 0.5rem;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  background: none;
+  border: none;
+  border-right: 2px solid lightgray;
+}
+
+.remove_book {
+  cursor: pointer;
+  width: 4.375rem;
+  height: 1.188rem;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  padding-right: 0.8rem;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  background: none;
+  border: none;
+  border-right: 2px solid lightgray;
+}
+
+.edit_book {
+  cursor: pointer;
+  width: 1.688rem;
+  height: 1.188rem;
+  margin: 0.188rem 0 0.125rem 0;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  background: none;
+  border: none;
+}
+
+.percentage {
+  width: 100%;
+  text-align: start;
+  margin-top: 1.5rem;
+  padding-right: 1.5rem;
+  border-right: 1px solid #e8e8e8;
+  position: relative;
+}
+
+.circle {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  border: 5px solid #0290ff;
+  border-left: 5px solid lightgray;
+  transform: rotate(45deg);
+}
+
+.percentage span {
+  position: absolute;
+  top: 5px;
+  left: 40%;
+  font-family: Montserrat;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.percent {
+  font-size: 1.5rem;
+  color: #353535;
+}
+
+.completed {
+  opacity: 0.5;
+  font-size: 0.875rem;
+  color: #121212;
+}
+
+.progress_container {
+  width: 100%;
+  padding-left: 4rem;
+  margin-top: 1rem;
+}
+
+.current_chapter {
+  opacity: 0.5;
+  font-family: RobotoSlab;
+  font-size: 0.65rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.chapter {
+  font-family: RobotoSlab;
+  font-size: 0.7rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #535353;
+  margin: 0.6rem 0 1.5rem;
+}
+
+.update_progress_btn {
+  width: 100%;
+  font-family: RobotoSlab;
+  font-size: 0.613rem;
+  font-weight: 300;
+  padding: 0.5rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: rgba(255, 255, 255, 0.5);
+  border: #0290ff;
+}
+
