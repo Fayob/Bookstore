@@ -1,0 +1,57 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 1rem 2rem;
+}
+
+.navbar_container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar_container h2 {
+  color: #0290ff;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.navbar_lists {
+  display: inline;
+}
+
+.book {
+  color: #121212;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+}
+
+.categories {
+  color: #121212;
+  opacity: 0.5;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+}
+
+.profile {
+  cursor: pointer;
+}
+
+.profile_img {
+  width: 2.813rem;
+  height: 2.813rem;
+}
