@@ -7,14 +7,17 @@ import Navbar from './component/Navbar';
 import './App.css';
 
 const App = () => (
-  <Router>
-    <Navbar />
-    <Routes>
-      <Route path="/" element={<Books />} />
-      <Route path="/categories" element={<Categories />} />
-      <Route path="*" element={<h1>Error...</h1>} />
-    </Routes>
-  </Router>
+  <div className="app_body">
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Books />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="*" element={<h1>Error...</h1>} />
+      </Routes>
+    </Router>
+  </div>
+
 );
 
 export default App;
