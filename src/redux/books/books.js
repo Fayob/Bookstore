@@ -3,7 +3,6 @@ import axios from 'axios';
 
 const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/iLHHUaQkGnHrtgSfZHWb/books';
 
-// eslint-disable-next-line consistent-return
 export const getAllBooks = createAsyncThunk('book/getAllBooks', async (_, thunkAPI) => {
   try {
     const response = await axios(url);
