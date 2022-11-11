@@ -1,6 +1,7 @@
 .book_card {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 80%;
   height: 10.625rem;
   margin: 2.313rem auto 0;
@@ -58,6 +59,7 @@
   width: 4.563rem;
   height: 1.188rem;
   margin: 0.188rem 0.938rem 0.125rem 0.5rem;
+  padding-right: 5rem;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
@@ -149,7 +151,6 @@
 .progress_container {
   width: 100%;
   padding-left: 4rem;
-  margin-top: 1rem;
 }
 
 .current_chapter {

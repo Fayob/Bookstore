@@ -10,6 +10,10 @@ Book Store project is a react website that stores and displays list of books ava
 
 This project was based on learning React and Redux.
 
+## Live Demo
+
+[Checkout the live demo here](https://bookstore-fayob.netlify.app)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
