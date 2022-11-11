@@ -19,9 +19,9 @@ const Book = ({
         <p className="category">{category}</p>
         <h2 className="title">{title}</h2>
         <p className="book_paragraph">{author}</p>
-        <button type="button" onClick={() => removeBooks(id)} className="comment_book"> Comments </button>
+        <button type="button" className="comment_book"> Comments </button>
         <button type="button" onClick={() => removeBooks(id)} className="remove_book"> Remove </button>
-        <button type="button" onClick={() => removeBooks(id)} className="edit_book"> Edit </button>
+        <button type="button" className="edit_book"> Edit </button>
       </div>
       <div className="percentage">
         <div className="circle" />
